@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Zabbix_Sender</id>
+    <version>1.0.0</version>
+    <title>Zabbix_Sender</title>
+    <authors>Yann Gaude-Gourret</authors>
+    <owners>Yann Gaude-Gourret</owners>
+    <projectUrl>https://github.com/yanngg33/Zabbix_Sender</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .NET Library to send messages to Zabbix Trapper Items. Compliant with Zabbix 3.x and 4.x</description>
+    <releaseNotes>Initial Release.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>Zabbix Sender Trapper</tags>
+  </metadata>
+</package>
