@@ -1,5 +1,5 @@
 
-[![Nuget](https://img.shields.io/nuget/v/Zabbix_Sender.svg?style=plastic)](https://www.nuget.org/packages/Zabbix_Sender)
+[![Nuget](https://img.shields.io/nuget/v/Zabbix_Sender.svg?style=plastic)](https://www.nuget.org/packages/Zabbix_Sender) [![Nuget](https://img.shields.io/nuget/dt/Zabbix_Sender.svg?style=plastic)](https://www.nuget.org/packages/Zabbix_Sender)
 
 # Zabbix_Sender
 Very simple C# library to send messages to a zabbix trapper item
