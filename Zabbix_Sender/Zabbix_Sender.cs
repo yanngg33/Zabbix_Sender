@@ -8,38 +8,38 @@ namespace Zabbix_Sender
 {
     public class ZS_Data
     {
-        public string Host { get; set; }
-        public string Key { get; set; }
-        public string Value { get; set; }
+        public string host { get; set; }
+        public string key { get; set; }
+        public string value { get; set; }
         public ZS_Data(string Zbxhost, string Zbxkey, string Zbxval)
         {
-            Host = Zbxhost;
-            Key = Zbxkey;
-            Value = Zbxval;
+            host = Zbxhost;
+            key = Zbxkey;
+            value = Zbxval;
         }
     }
 
     public class ZS_Response
     {
-        public string Response { get; set; }
-        public string Info { get; set; }
+        public string response { get; set; }
+        public string info { get; set; }
 
     }
 
     public class ZS_Request
     {
-        public string Request { get; set; }
-        public ZS_Data[] TblData { get; set; }
+        public string request { get; set; }
+        public ZS_Data[] data { get; set; }
         public ZS_Request(string ZbxHost, string ZbxKey, string ZbxVal)
         {
-            Request = "sender data";
-            TblData = new ZS_Data[] { new ZS_Data(ZbxHost, ZbxKey, ZbxVal) };
+            request = "sender data";
+            data = new ZS_Data[] { new ZS_Data(ZbxHost, ZbxKey, ZbxVal) };
         }
 
 
         public ZS_Response Send(string ZbxServer, int ZbxPort = 10051, int ZbxTimeOut = 500)
         {
-            string jr = JsonConvert.SerializeObject(new ZS_Request(TblData[0].Host, TblData[0].Key, TblData[0].Value));
+            string jr = JsonConvert.SerializeObject(new ZS_Request(data[0].host, data[0].key, data[0].value));
             using (TcpClient lTCPc = new TcpClient(ZbxServer, ZbxPort))
             using (NetworkStream lStream = lTCPc.GetStream())
             {
